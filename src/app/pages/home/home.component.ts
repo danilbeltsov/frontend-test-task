@@ -13,6 +13,7 @@ import { BannerService } from '@shared/services/banner.service';
 import { BannerCard } from '@shared/types/banner-card.type';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { BannerCardComponent } from '@components/banner-card/banner-card.component';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -38,7 +39,7 @@ export class HomeComponent implements OnInit {
 
     this.bannerService
       .getBannerImages()
-      .pipe(takeUntilDestroyed(this.destroyRef))
+      .pipe(delay(1000), takeUntilDestroyed(this.destroyRef))
       .subscribe((cards) => {
         this.bannerCards.set(cards);
         this.loading.set(false);

@@ -1,3 +1,5 @@
+<div *ngIf="loading()" class="spinner"></div>
+
 <app-carousel *ngIf="bannerCards().length" [autoScroll]="10000">
   <app-banner-card
     *ngFor="let card of bannerCards()"
