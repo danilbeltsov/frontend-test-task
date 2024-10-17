@@ -1,0 +1,55 @@
+.banner-card {
+  display: block;
+  background-repeat: no-repeat;
+  height: 460px;
+  max-height: 460px;
+  background-position: center -50px;
+  width: 100vw;
+
+  @media (min-width: 415px) {
+    background-size: cover;
+
+    &__image {
+      max-width: 378px;
+    }
+  }
+
+
+  &-content {
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem 1.5rem 3rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .btn {
+
+      width: fit-content;
+      font-weight: 700;
+    }
+  }
+}
+
+
+

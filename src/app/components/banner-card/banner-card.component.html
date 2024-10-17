@@ -1,1 +1,24 @@
-<p>banner-card works!</p>
+<div class="banner-card"
+     [style.background-image]="'url(' + card()?.background + ')'"
+>
+  <div class="banner-card-content">
+    <img class="banner-card__image"
+         [src]="card()?.image"
+         [alt]="card()?.title"
+         draggable="false"
+         width="90%"
+         height="auto"
+    />
+    <div class="banner-card__info">
+      <h5 class="title">
+        {{ card()?.title }}
+      </h5>
+      <p class="description" [innerHTML]="card()?.description"></p>
+
+      <button class="btn btn--small btn--primary btn--outline" (click)="onButtonClick()">
+        {{ card()?.buttonText }}
+      </button>
+    </div>
+  </div>
+</div>
+
