@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primary-color);
+  overflow-x: hidden;
+  font-family: Inter, sans-serif;
+}
+
+.banner-card__info strong {
+  color: var(--secondary-color);
+}

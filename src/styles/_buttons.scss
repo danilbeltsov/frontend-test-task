@@ -1,0 +1,24 @@
+.btn {
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn--small {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+
+  &.btn--outline {
+    border-radius: 2rem;
+  }
+}
+
+.btn--primary {
+  color: var(--primary-color);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid currentColor;
+}
