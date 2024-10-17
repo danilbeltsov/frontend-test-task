@@ -1,5 +1,9 @@
-<div class="carousel-container">
-  <div class="carousel-track">
+<div
+  class="carousel-container"
+  (touchstart)="onTouchStart($event)"
+  (touchmove)="onTouchMove($event)"
+  (touchend)="onTouchEnd($event)">
+  <div class="carousel-wrapper" #carouselWrapper>
     <ng-content></ng-content>
   </div>
 </div>
