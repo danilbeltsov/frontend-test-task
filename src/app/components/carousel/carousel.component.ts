@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ContentChildren,
   ElementRef,
@@ -18,9 +19,9 @@ import { CommonModule } from '@angular/common';
   selector: 'app-carousel',
   standalone: true,
   imports: [CommonModule],
-
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
   private ngZone: NgZone = inject(NgZone);
