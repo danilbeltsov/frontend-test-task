@@ -1,27 +1,36 @@
 # FrontendTestTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+## Task
 
-## Development server
+Requirements:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- support mobile screens (<600px) only, no desktop
+- one slide utilises 100vw
+- should be possible to change slides by swiping
+- slides data should be abstracted, not hardcoded
+- slide has background image, main image, title, text and button
+- output: repository on github
 
-## Code scaffolding
+Optional, if have time and desire:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- timer to change slides every 10 seconds
+- prevent vertical scrolling while swiping
+- simulate loading from api
 
-## Build
+## Thoughts on this task
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- I decide to implement this carousel using ```<ng-content>``` because it gives us the flexibility to add any type of slides.
+- because of no figma provided, I didn't focus too much on the details and implemented the design by eye.
+- For the purpose of this task, I placed images for the slides in the assets folder. However, I believe it would be better to serve them from a CDN storage, such as S3
+- Clicking on buttons in the slides will not do anything, except ```console.log()```, but it can be modified because of the callback fn i provided with.
 
-## Running unit tests
+## Start project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run this project simply run the following command in the terminal:
 
-## Running end-to-end tests
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+it will start the project on `http://localhost:4200/`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
